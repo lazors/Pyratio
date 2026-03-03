@@ -1,0 +1,6 @@
+# Specify configuration file
+# This file configures how the spec kit tools interact with your project
+
+project_name: Pyratio
+spec_dir: .specify
+assistant: claude
