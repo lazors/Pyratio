@@ -1,0 +1,5 @@
+rules:
+  - layer: e2e
+    glob: "test/browser/**"
+  - layer: smoke
+    glob: "test/smoke/**"
