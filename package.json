@@ -1,0 +1,58 @@
+{
+  "name": "pyratio",
+  "version": "0.1.0",
+  "description": "Analyze the test pyramid ratio of any code repository",
+  "type": "commonjs",
+  "bin": {
+    "pyratio": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --minify --clean",
+    "dev": "tsx watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run typecheck && npm run build && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazors/Pyratio.git"
+  },
+  "keywords": [
+    "testing",
+    "test-pyramid",
+    "cli",
+    "code-quality"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lazors/Pyratio/issues"
+  },
+  "homepage": "https://github.com/lazors/Pyratio#readme",
+  "dependencies": {
+    "cli-table3": "^0.6.5",
+    "commander": "^14.0.3",
+    "picomatch": "^4.0.3",
+    "tinyglobby": "^0.2.15",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "@types/picomatch": "^4.0.2",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}
