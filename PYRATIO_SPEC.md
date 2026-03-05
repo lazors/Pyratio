@@ -30,7 +30,7 @@ The most universal and reliable signal. Scan file paths for conventional directo
 - **Go:** `*_test.go` in `unit/`, `integration/`, `e2e/` directories
 - **Rust:** `tests/` (integration by Rust convention), inline `#[cfg(test)]` modules (unit), `tests/e2e/`
 
-### 2. Test Runner / Config Detection (Secondary)
+### 2. Test Runner / Config Detection
 
 Detect test frameworks and their configs to infer test types.
 
